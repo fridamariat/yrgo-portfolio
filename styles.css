@@ -1,0 +1,273 @@
+* {
+  box-sizing: border-box;
+}
+header {
+  background-color: white;
+  font-family: "Dm Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+body {
+  background-color: #fff;
+  margin: 0;
+  font-family: "Dm Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+footer {
+  height: 200px;
+}
+a {
+  color: #1c1b1b;
+  text-decoration: none;
+  gap: 4px;
+}
+a:hover {
+  color: #29d59b;
+  text-decoration: underline;
+}
+
+.underline-link {
+  text-decoration: underline;
+  color: inherit;
+}
+
+.columns {
+  display: flex;
+  justify-content: space-around;
+  gap: 16px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 16px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 33.33333%;
+  gap: 16px;
+  padding-bottom: 0px;
+}
+
+.column1 {
+  display: flex;
+  justify-content: center;
+  gap: 0px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 48px;
+  margin-top: 72px;
+}
+
+.column2 {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 16px;
+  padding-bottom: 38px;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-family: "Prata", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 56px;
+  line-height: 70px;
+  letter-spacing: 0px;
+}
+
+h2 {
+  margin-bottom: 5px;
+  font-family: "Dm sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 26px;
+  line-height: 38px;
+}
+
+h3 {
+  color: #1c1b1b;
+  margin-bottom: 2px;
+  margin-top: 8px;
+  font-family: "Dm sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 19px;
+}
+
+h4 {
+  color: #968e8e;
+  margin-top: 0px;
+  margin-bottom: 16px;
+  font-family: "Dm sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 19px;
+}
+p {
+  padding-bottom: 10px;
+  margin-top: 0px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.snurrande-bild img {
+  width: 200px;
+  height: auto;
+  animation: snurra 6s linear infinite;
+}
+
+.effect-on-hover img,
+.effect-on-hover video {
+  transition: opacity 0.3s ease;
+}
+
+.effect-on-hover:hover img,
+.effect-on-hover:hover video {
+  opacity: 0.7;
+}
+
+.effect-on-hover:hover a {
+  text-decoration: none;
+}
+
+.effect-on-hover:hover h3 {
+  font-weight: 800;
+}
+
+.label {
+  font-size: 19px;
+  text-transform: UPPERCASE;
+}
+.footer {
+  margin-bottom: 100px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-right: 32px;
+}
+
+nav ul li {
+  margin-left: 32px;
+}
+
+nav ul li a {
+  display: flex;
+  align-items: center;
+  color: #1c1b1b;
+  font-size: 19px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.headings {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 32px;
+  padding-right: 56px;
+  padding-top: 112px;
+  padding-bottom: 72px;
+}
+
+.headings h2 {
+  max-width: 40%;
+}
+@media (max-width: 620px) {
+  .columns {
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .column {
+    width: 100%;
+    margin-top: 0px;
+  }
+
+  .column1 {
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 48px;
+  }
+
+  .column2 {
+    width: 100%;
+    padding-bottom: 0px;
+  }
+
+  header {
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .headings {
+    flex-direction: column;
+    align-items: normal;
+    gap: 32px;
+    padding-bottom: 72px;
+    padding-top: 48px;
+  }
+
+  .headings h2 {
+    max-width: 100%;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 16px;
+    margin-right: 16px;
+  }
+
+  nav ul li {
+    margin-left: 0;
+  }
+
+  nav ul li a {
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 1220px) {
+  h2 {
+    font-size: 22px;
+    line-height: 32px;
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 1060px) {
+  h1 {
+    font-size: 48px;
+    line-height: 60px;
+    margin-bottom: 0px;
+  }
+}
+
+@keyframes snurra {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
