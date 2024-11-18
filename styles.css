@@ -7,11 +7,22 @@ header {
   font-weight: 400;
   font-style: normal;
   color: white;
-  padding: 10px 0;
+  padding: 0px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  position: fixed; /* Gör headern fixerad */
+  transition: background-color 0.3s ease;
+  width: 100%;
+  z-index: 1000;
+}
+header.scrolled {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Lätt transparent vid scrollning */
 }
 body {
   background-color: #fff;
@@ -19,9 +30,7 @@ body {
   font-family: "Dm Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
-}
-footer {
-  height: 200px;
+  top: 600px;
 }
 a {
   color: #1c1b1b;
@@ -111,6 +120,19 @@ h4 {
   font-style: normal;
   font-size: 19px;
 }
+
+h5 {
+  color: #1c1b1b;
+  margin-bottom: 2px;
+  margin-top: 8px;
+  font-family: "Dm sans", sans-serif;
+  font-weight: 800;
+  text-transform: UPPERCASE;
+  font-style: bold;
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+
 p {
   padding-bottom: 10px;
   margin-top: 0px;
@@ -123,8 +145,8 @@ img {
 }
 
 .snurrande-bild img {
-  width: 200px;
-  height: auto;
+  width: 168px;
+  height: 68;
   animation: snurra 6s linear infinite;
 }
 
@@ -151,7 +173,12 @@ img {
   text-transform: UPPERCASE;
 }
 .footer {
-  margin-bottom: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 24px;
+  padding-top: 180px;
+  padding-bottom: 48px;
 }
 
 nav ul {
@@ -186,12 +213,32 @@ nav ul li a:hover {
   align-items: center;
   padding-left: 32px;
   padding-right: 56px;
-  padding-top: 112px;
+  padding-top: 300px;
   padding-bottom: 72px;
 }
 
 .headings h2 {
   max-width: 40%;
+}
+
+.project_text {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding-left: 32px;
+  padding-right: 56px;
+  padding-top: 300px;
+  padding-bottom: 0px;
+  max-width: 40%;
+}
+
+.divider {
+  height: 4px; /* Höjden på linjen */
+  align-items: left;
+  background-color: #1c1b1b; /* Färgen på linjen */
+  border: none; /* Tar bort standardstilen */
+  width: 30%; /* Gör linjen kortare */
+  margin: 8px 0;
 }
 @media (max-width: 620px) {
   .columns {

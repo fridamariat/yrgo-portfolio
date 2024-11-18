@@ -24,12 +24,14 @@
   <body>
     <header>
       <div class="snurrande-bild">
-        <img
-          src="Frida_logo.png"
-          alt="Frida Thornblad logo"
-          width="168"
-          height="68"
-        />
+        <a href="index.html">
+          <img
+            src="Frida_logo.png"
+            alt="Frida Thornblad logo"
+            width="168"
+            height="68"
+          />
+        </a>
       </div>
 
       <nav>
@@ -83,13 +85,15 @@
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                /></svg
-            ></a>
+                />
+              </svg>
+            </a>
           </li>
 
           <li>
-            <a href="#"
-              >Contact<svg
+            <a href="#">
+              Contact
+              <svg
                 width="20"
                 height="20"
                 viewBox="0 0 20 20"
@@ -109,8 +113,9 @@
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                /></svg
-            ></a>
+                />
+              </svg>
+            </a>
           </li>
         </ul>
       </nav>
@@ -130,6 +135,7 @@
           class="underline-link"
           >LinkedIn</a
         >
+
         or send me an
         <a href="mailto:info@fridathornblad.se" class="underline-link">email</a
         >.
@@ -146,11 +152,13 @@
           </a>
         </div>
         <div class="effect-on-hover">
-          <video width="100%" autoplay loop muted>
-            <source src="snowglobe_animation.mp4" type="video/mp4" />
-          </video>
-          <h3>Personal work</h3>
-          <h4>Animations</h4>
+          <a href="animations.html">
+            <video width="100%" autoplay loop muted>
+              <source src="snowglobe_animation.mp4" type="video/mp4" />
+            </video>
+            <h3>Personal work</h3>
+            <h4>Animations</h4>
+          </a>
         </div>
       </div>
 
@@ -182,6 +190,34 @@
         </div>
       </div>
     </div>
-    <footer></footer>
+    <footer>
+      <div class="footer">
+        <a
+          href="https://www.instagram.com/frida.thornblad/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="instagram.svg" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/frida-thornblad-582017141"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="linkedin.svg" />
+        </a>
+      </div>
+    </footer>
+    <script>
+      const header = document.querySelector("header");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      });
+    </script>
   </body>
 </html>

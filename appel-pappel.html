@@ -23,12 +23,16 @@
 
   <body>
     <header>
-      <img
-        src="Frida_logo.png"
-        alt="Frida Thornblad logo"
-        width="168"
-        height="68"
-      />
+      <div class="snurrande-bild">
+        <a href="index.html">
+          <img
+            src="Frida_logo.png"
+            alt="Frida Thornblad logo"
+            width="168"
+            height="68"
+          />
+        </a>
+      </div>
       <nav>
         <ul>
           <li>
@@ -80,13 +84,15 @@
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                /></svg
-            ></a>
+                />
+              </svg>
+            </a>
           </li>
 
           <li>
-            <a href="#"
-              >Contact<svg
+            <a href="#">
+              Contact
+              <svg
                 width="20"
                 height="20"
                 viewBox="0 0 20 20"
@@ -106,37 +112,79 @@
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                /></svg
-            ></a>
+                />
+              </svg>
+            </a>
           </li>
         </ul>
       </nav>
     </header>
-    <div class="column1">
-    <div>
-        <img src="Logotyp.png" />
+
+    <div class="project_text">
+      <h5>Studio Äppel Päppel</h5>
+      <hr class="divider" />
+      <h3>Grafisk profil</h3>
+      <h2>
+        Grafisk profil till designbyrån Studio Äppel Päppel. Framtagen
+        tillsammans med Erika Lindmark.
+      </h2>
     </div>
-   </div>
+
+    <div class="column1">
+      <div>
+        <img src="Logotyp.png" />
+      </div>
+    </div>
 
     <div class="columns">
-    <div class="column2">
-      <div>
-        <img src="typografi.png" />
+      <div class="column2">
+        <div>
+          <img src="typografi.png" />
+        </div>
+
+        <div>
+          <img src="farger.png" />
+        </div>
       </div>
 
-      <div>
-        <img src="farger.png" />
+      <div class="column2">
+        <div>
+          <img src="illustrationer.png" />
+        </div>
+
+        <div>
+          <img src="Monster_grafisk_identitet.png" />
+        </div>
       </div>
     </div>
-
-    <div class="column2">
-      <div>
-        <img src="illustrationer.png" />
+    <footer>
+      <div class="footer">
+        <a
+          href="https://www.instagram.com/frida.thornblad/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="instagram.svg" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/frida-thornblad-582017141"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="linkedin.svg" />
+        </a>
       </div>
+    </footer>
+    <script>
+      const header = document.querySelector("header");
 
-      <div>
-        <img src="Monster_grafisk_identitet.png" />
-      </div>
-    </div>
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      });
+    </script>
   </body>
 </html>
