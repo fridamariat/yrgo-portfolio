@@ -128,6 +128,14 @@ h5 {
   letter-spacing: 2px;
 }
 
+.page-link {
+  color: #1c1b1b;
+  font-size: 19px;
+  text-transform: UPPERCASE;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
 p {
   padding-bottom: 10px;
   margin-top: 0px;
@@ -178,11 +186,23 @@ h3.large {
 .previous {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  gap: 24px;
+  justify-content: space-between;
   padding-top: 32px;
   padding-bottom: 48px;
+  padding-left: 32px;
+  padding-right: 32px;
 }
+
+.previous a {
+  display: flex;
+  align-items: center;
+}
+
+.previous a:hover svg,
+.previous a:hover .page-link {
+  color: #663ac2;
+}
+
 .footer {
   display: flex;
   flex-direction: row;
@@ -240,6 +260,9 @@ nav ul li a:hover {
   padding-top: 240px;
   padding-bottom: 32px;
   max-width: 40%;
+}
+.animation_sida {
+  padding-top: 240px;
 }
 
 .divider {
